@@ -84,9 +84,9 @@ float LinuxParser::MemoryUtilization() {
     }
     float MemTotal = utilizationInfo[0];
     float MemFree = utilizationInfo[1];
-    float MemAvailable = utilizationInfo[2];
+    // float MemAvailable = utilizationInfo[2];
 
-    return MemTotal-MemFree/ MemTotal;
+    return (MemTotal-MemFree)/ MemTotal;
    }
    return 0.0;
 }

@@ -50,7 +50,7 @@ string Process::User() {
 }
 
 long int Process::UpTime() {
-    return LinuxParser::UpTime(pid);
+    return LinuxParser::UpTime() - LinuxParser::UpTime(pid);
 }
 
 bool Process::operator<(Process const& a) const {
